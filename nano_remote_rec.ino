@@ -38,7 +38,7 @@ void loop() {
 
     switch(IrReceiver.decodedIRData.decodedRawData)
     {
-      case 0xBF40FF00: //Keypad button "5"
+      0xBA45FF00: // 0xBA45FF00: Keypad Off/On // 0xBF40FF00: Keypad button "5"
         Serial.println("5");
         currentPosition = (currentPosition == 0) ? 180 : 0;  // Toggle position
         myServo.write(currentPosition);
